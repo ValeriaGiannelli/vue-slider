@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carousel Bonus 1</title>
-
-
+    <!-- link a Vue 3.x -->
+    <script src="https://unpkg.com/vue@3"></script>
     <!-- link al mio css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,11 +18,25 @@
         <div class="col">
             <!-- ulteriore contenitore per le immagini -->
             <div class="card_container">
-                <!-- qui compariranno i div con le img tramite JS -->
+                <!-- questo si dovrà modificare a seconda del Vue -->
+                <div class="item">
+                    <!-- immagine -->
+                    <img :src="slides[showImg].image" :alt="slides[showImg].title">
+
+                    <!-- titolo e descrizione -->
+                    <div class="info">
+                        <h2>{{slides[showImg].title}}</h2>
+                        <h4>{{slides[showImg].text}}</h4>
+                    </div>
+                    
+                </div>
             </div>
 
             <div class="container_thumbnails">
-                <!-- qui compariranno le immagini più piccole -->
+                <!-- qui dovrò fare le thumbnails -->
+                <div class="thumbnails" v-for="slide in slides">
+                    <img :src="slide.image" :alt="slide.title">
+                </div>
             </div>
             
             <div class="arrow_up btn">&uparrow;</div>
@@ -32,11 +46,11 @@
 
 
     </div>
-    </div>
 
 
     <!-- link al codice JavaScript -->
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- <script type="text/javascript" src="js/main.js"></script> -->
 </body>
 
 </html>

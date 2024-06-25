@@ -61,5 +61,16 @@ createApp ({
                 }
             ]
         }
+    },
+    methods: {
+        clickDown (){
+            // aumenta l'indice di uno
+            this.showImg++;
+            // gestisco quando arriva alla fine
+            if(this.showImg > this.slides.length -1){
+                this.showImg = 0;
+            }
+
+        }
     }
 }).mount("#container");

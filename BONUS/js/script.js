@@ -80,9 +80,13 @@ createApp ({
                 this.showImg = this.slides.length - 1;
             }
         },
-        thumbnailClick(){
+        thumbnailClick(indiceThumbanail){
             // se clicca su una thumbnail questo prende l'indice e modifica il showImg dello slider così da mostrare la stessa foto
-            
+            if(this.slides[indiceThumbanail] !== this.showImg){
+                    console.log(this.slides[indiceThumbanail]);
+                    this.showImg = indiceThumbanail;
+                }
+
             // for(i = 0; i < this.slides.length; i++){
             //     // console.log(this.slides[i]);
             //     if(this.slides[i] !== this.showImg){

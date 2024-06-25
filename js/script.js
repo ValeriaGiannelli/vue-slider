@@ -71,6 +71,14 @@ createApp ({
                 this.showImg = 0;
             }
 
+        },
+        clickUp(){
+            // decrementa l'indice
+            this.showImg--;
+            // gestico quando diventa minore di 0
+            if(this.showImg < 0){
+                this.showImg = this.slides.length - 1;
+            }
         }
     }
 }).mount("#container");

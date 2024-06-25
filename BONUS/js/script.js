@@ -86,14 +86,6 @@ createApp ({
                     console.log(this.slides[indiceThumbanail]);
                     this.showImg = indiceThumbanail;
                 }
-
-            // for(i = 0; i < this.slides.length; i++){
-            //     // console.log(this.slides[i]);
-            //     if(this.slides[i] !== this.showImg){
-            //         console.log(this.slides[i]);
-            //         // this.showImg = this.slides[i];
-            //     }
-            // }
         }
     }
 }).mount("#container");

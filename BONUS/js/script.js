@@ -87,5 +87,8 @@ createApp ({
                     this.showImg = indiceThumbanail;
                 }
         }
+    },
+    mounted(){
+        setInterval(this.clickDown, 3000);
     }
 }).mount("#container");

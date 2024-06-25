@@ -34,7 +34,7 @@
 
             <div class="container_thumbnails">
                 <!-- qui dovrò fare le thumbnails -->
-                <div class="thumbnails" v-for="slide in slides">
+                <div class="thumbnails" :class = "showImg === index ? 'active_thumbnails' : '' " v-for="(slide, index) in slides">
                     <img :src="slide.image" :alt="slide.title">
                 </div>
             </div>
